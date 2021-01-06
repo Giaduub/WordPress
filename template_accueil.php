@@ -3,11 +3,11 @@
 <?php get_header(); ?>
 
 <div class="col-9">
-            <div class="container">
-                <div class="row">
-                    <h2 class="my-4 text-uppercase"> Latest <span>work</span> </h2>
+    <div class="container">
+        <div class="row">
+            <h2 class="my-4 text-uppercase"> Latest <span>work</span> </h2>
 
-                    <?php 
+            <?php 
 
 $work = get_field("images");
 
@@ -21,50 +21,68 @@ for($i=0; $i <count($work) ; $i++){
 ?>
 
 
-                </div>
-            </div>
+        </div>
+    </div>
 
 
-            <div class="container">
+    <div class="container">
 
-                <?php while (have_posts()) : the_post(); ?>
-                <h2 class="aboutt"><?php the_title(); ?></h2>
-                <div class="row">
-                    <?php the_content(); ?>
-                    <?php endwhile; ?>
-                </div>
-            </div>
+        <?php while (have_posts()) : the_post(); ?>
+        <h2 class="my-4 text-uppercase">About <span>paper</span></h2>
+        <div class="row">
+            <?php the_content(); ?>
+            <?php endwhile; ?>
+        </div>
+    </div>
 
 
-            <?php $slide = get_field("image_slider"); ?>
+ 
 
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="<?= $slide[0]['img_slider']['url']?>"
-                            alt="<?= $slide[0]['description']?>">
-                    </div>
-                    <?php 
 
-for($i=1; $i <count($slide) ; $i++){
-     echo "<div class='carousel-item'>";
-     echo "<img class='d-block w-100' src='".$slide[$i]['img_slider']['url']."' alt='".$slide[$i]['description']."'></div>";
-
+<div class="container">
+<div class="bd-example">
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+<?php
+$slide = get_field("image_slider");
+for ($i=1; $i < count($slide); $i++){
+echo '<li data-target="#carouselExampleCaptions" data-slide-to="'.$i.'">';
 }
+?>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="<?=$slide[0]["img_slider"]['url']?>" class="d-block w-100" alt="...">
+</div>
+<?php
+
+for ($i=1; $i < count($slide); $i++){
+echo '<div class="carousel-item">
+<img src="'.$slide[$i]["img_slider"]['url'].'" class="d-block w-100" alt="...">
+</div>';
+}
+?>
+</div>
+</div>
+</div>
+    </div>
+
+    <div class="container">
+        <h2 class="my-4 text-uppercase">This is an <span>awesome design</span></h2>
+        <div class="row">
+            <?php 
+
+        $paragraphe = get_field('texte_p'); 
+
+      
+     echo "<div class='awesome'>";
+     echo "<p class='paragraphe'>".$paragraphe."</p></div>";
+
 
 ?>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
-            </div>
-        
+        </div>
+    </div>
 </div>
 
 <?php get_footer(); ?>

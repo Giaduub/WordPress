@@ -17,22 +17,31 @@ body{
   
 }
 
-a{
-  
+.paragraphe{
+  width: ;
+  column-count:3;
 }
 
 .logo{
-  height: 80px;
-    width: 80px;
+  height: 120px;
+    width: 120px;
     padding: 5px;
     text-align: center; 
     border-radius: 50%;
     display: inline-block;
+    position: absolute;
+    z-index: 1;
     color:#fff;
     font-size:1.1em;
     font-weight:600;
     background-color: rgba(54,51,57,1);
     border: 1px solid rgba(0,0,0,0.2);
+}
+
+.logosecond{
+  position: relative;
+  z-index: 2;
+  color: white !important;
 }
 
 
@@ -42,6 +51,14 @@ span{
 
 .menu{
   width: 10%;
+}
+
+.secondMenu{
+  margin-top: 300px;
+}
+
+.firstMenu{
+  margin-top: 100px;
 }
 
 .all{
