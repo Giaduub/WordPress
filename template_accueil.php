@@ -3,7 +3,7 @@
 <?php get_header(); ?>
 
 <div class="col-9">
-    <div class="container">
+    <div class=" my-4 container">
         <div class="row">
             <h2 class="my-4 text-uppercase"> Latest <span>work</span> </h2>
 
@@ -25,7 +25,7 @@ for($i=0; $i <count($work) ; $i++){
     </div>
 
 
-    <div class="container">
+    <div class="container my-4">
 
         <?php while (have_posts()) : the_post(); ?>
         <h2 class="my-4 text-uppercase">About <span>paper</span></h2>

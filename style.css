@@ -14,11 +14,32 @@ body{
 
 .menu-item{
   list-style: none;
+  text-decoration: none;
   
 }
 
+.menu-item>a{
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-item>a:hover{
+  color: #f47b41!important;
+}
+
+
+a{
+text-decoration: none;
+color: black!important;
+font-style: italic;
+}
+
+.bggrey{
+  background-color: #e5e5e6;
+}
+
+
 .paragraphe{
-  width: ;
   column-count:3;
 }
 
@@ -39,14 +60,24 @@ body{
 }
 
 .logosecond{
+  left: 20px;
+  top: -20px;
+  font-size: 25px;
   position: relative;
   z-index: 2;
   color: white !important;
 }
 
+.logosecond::after{
+  content: "";
+  top: 10%;
+  font-size: 80px;
+  color: #f47b41!important;
+}
+
 
 span{
-  color: #f5b39a;
+  color: #f47b41!important;
 }
 
 .menu{
@@ -55,10 +86,11 @@ span{
 
 .secondMenu{
   margin-top: 300px;
+  font-style: italic;
 }
 
 .firstMenu{
-  margin-top: 100px;
+  margin-top: -20px;
 }
 
 .all{
@@ -71,6 +103,7 @@ span{
 
 h2{
  font-size: 3vh;
+ font-style: bold;
 }
 
 
