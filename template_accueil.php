@@ -83,6 +83,23 @@ echo '<div class="carousel-item">
 ?>
         </div>
     </div>
+
+    <div class="container">
+        <h3 class="my-4 text-uppercase">This is a quote or <span>call to action</span></h3>
+        <div class="row justify-content-center">
+            <div class="col-10 ">
+            <?php $quote = get_field('quote');
+
+            for($i=0; $i < count($quote); $i++){
+                echo "<p class='texte_q'>".$quote[$i]['texte_q']."</p>";
+                echo "<div class='d-flex justify-content-end'> <p class='details'>".$quote[$i]['details']."</p></div>";
+            }
+            // var_dump($quote);
+            ?>
+            </div>
+        </div>
+        </div>
+
 </div>
 
 <?php get_footer(); ?>

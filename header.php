@@ -24,13 +24,12 @@
       <div class='container d-flex justify-content-center '>
         <div class='row'>
           <div class="col-12 my-4 ">
-            <p class="logo"></p>
-            <p class="logosecond">Paper<span>*</p>
+           <img class="img-fluid" src="wp-content/uploads/2021/01/logo.png">
           </div>
         </div>
       </div>
       <div class="container d-flex justify-content-center  firstMenu">
-        <div class="row">
+        <div class="row text-center">
           <?php
 wp_nav_menu( array(
 'container' =>'nav',
@@ -49,22 +48,21 @@ wp_nav_menu( array(
         </div>
       </div>
       <div class="container d-flex justify-content-center secondMenu">
-        <div class="row">
-          <?php
-wp_nav_menu( array(
-'container' =>'nav',
-'theme_location' => '',
-'menu_id' => 'Paper2',
-'echo' => true,
-'before' => '',
-'after' => '',
-'link_before' => '',
-'link_after' => '',
-'depth' => 0,
-'items_wrap' => '%3$s',
-'walker' => '')
-);
-?>
+        <div class="row text-center">
+          <nav>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
+              <a class="grey" href="#">About paper</a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
+              <a class="grey" href="#">Contact Me</a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
+              <a class="grey" href="#">Check out Twitter</a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45">
+              <a class="grey" href="#">Check out Facebook</a>
+</li>
+</nav>
         </div>
       </div>
     </div>
